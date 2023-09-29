@@ -73,7 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="280dp"
         android:text="LOGIN"
-        app:backgroundTint="#FF6200EE"
+        app:backgroundTint="@color/purple_200"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.52"
