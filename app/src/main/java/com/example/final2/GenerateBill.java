@@ -40,7 +40,7 @@ public class GenerateBill extends AppCompatActivity {
                 double billAmount = calculateElectricityBill(unit);
                 textView.setText(String.valueOf(billAmount));
                 Intent intent = new Intent(GenerateBill.this, receiptpage.class);
-
+//tyehdgj
                 String name = "Abc";
                 String meterNo = "1234";
                 String caNo = "1234";
