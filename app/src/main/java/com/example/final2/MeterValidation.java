@@ -41,7 +41,7 @@ public class MeterValidation extends AppCompatActivity {
 
                 if (meterno.equals("1234")) {
                     //tv.setText(meterno);
-                    Intent intent = new Intent(getApplicationContext(), GenerateBill.class);
+                    Intent intent = new Intent(MeterValidation.this, GenerateBill.class);
                     intent.putExtra("meter_key",meterno);
                     startActivity(intent);
                 }

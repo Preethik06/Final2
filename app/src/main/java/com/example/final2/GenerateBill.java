@@ -39,6 +39,23 @@ public class GenerateBill extends AppCompatActivity {
                 int unit = n2 - n1;
                 double billAmount = calculateElectricityBill(unit);
                 textView.setText(String.valueOf(billAmount));
+                Intent intent = new Intent(GenerateBill.this, receiptpage.class);
+
+                String name = "Abc";
+                String meterNo = "1234";
+                String caNo = "1234";
+                String address = "Ponda";
+                String currentReading = "2345";
+                // Create the receipt string
+                String receipt = "Name: " + name + "\n" +
+                        "Meter No: " + meterNo + "\n" +
+                        "CA No: " + caNo + "\n" +
+                        "Address: " + address + "\n" +
+                        "Current Reading: " + currentReading + "\n" +
+                        "Total: [Calculate total here]";
+
+                intent.putExtra("receipt", receipt);
+                startActivity(intent);
             }
         });
     }
