@@ -39,7 +39,7 @@ public class MeterValidation extends AppCompatActivity {
                 //checkDataExistence();
                 meterno=meterNumberEditText.getEditableText().toString();
 
-                if (meterno.equals("1234")) {
+                if (meterno.equals("A_1234")) {
                     //tv.setText(meterno);
                     Intent intent = new Intent(MeterValidation.this, GenerateBill.class);
                     intent.putExtra("meter_key",meterno);

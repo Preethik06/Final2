@@ -24,7 +24,7 @@ public class GenerateBill extends AppCompatActivity {
         v1=findViewById(R.id.prevReading);
         v2=findViewById(R.id.currReading);
         meterno=findViewById(R.id.meterno);
-        textView=findViewById(R.id.textView1);
+        //textView=findViewById(R.id.textView1);
         calculate=findViewById(R.id.submit);
 
         Intent intent=getIntent();
@@ -38,21 +38,22 @@ public class GenerateBill extends AppCompatActivity {
                 int n2 = Integer.parseInt(v2.getText().toString());
                 int unit = n2 - n1;
                 double billAmount = calculateElectricityBill(unit);
-                textView.setText(String.valueOf(billAmount));
+                //textView.setText(String.valueOf(billAmount));
                 Intent intent = new Intent(GenerateBill.this, receiptpage.class);
-//tyehdgj
+
                 String name = "Abc";
-                String meterNo = "1234";
-                String caNo = "1234";
+                String meterNo = "A_1234";
+                String caNo = "60001527";
                 String address = "Ponda";
                 String currentReading = "2345";
+                String total = String.valueOf(billAmount);
                 // Create the receipt string
-                String receipt = "Name: " + name + "\n" +
-                        "Meter No: " + meterNo + "\n" +
-                        "CA No: " + caNo + "\n" +
-                        "Address: " + address + "\n" +
-                        "Current Reading: " + currentReading + "\n" +
-                        "Total: [Calculate total here]";
+                String receipt = "Name: " + name + "\n\n" +
+                        "Meter No: " + meterNo + "\n\n" +
+                        "CA No: " + caNo + "\n\n" +
+                        "Address: " + address + "\n\n" +
+                        "Current Reading: " + currentReading + "\n\n" +
+                        "Total: " + total;
 
                 intent.putExtra("receipt", receipt);
                 startActivity(intent);
